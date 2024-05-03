@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To my lil ball of rage </title	>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8d7da; /* Light pink background */
+            background-size: cover;
+            background-position: center;
+            transition: background 0.5s ease-in-out;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #f8d7da; /* Light pink background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .feedback-box {
+            margin-top: 50px;
+            background-color: #f8d7da; /* Light pink background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f8d7da; /* Light pink background */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        #message {
+            font-size: 60px; /* Adjust the font size as needed */
+        }
+    </style>
+</head>		
+<body>
+
+<div class="container">
+    <h1 style="color: #721c24;">My bebe	</h1>
+    <div id="message" style="color: #721c24;">
+        <h2>To my one and only bebe</h2>
+        <p>Hi bebe sorry kanina napakakulett ko din kasi waahhh, thankyou for being with me kahit napaka kulet ko AHAHHAHA, ikaw ang isa sa mga pinaka preciuos naa tao sa buhay ko and no word can explain how much you mean to me. I would never trade you to anything in this world ikaw lang at si rizzly ang aalagaan ko lagi without a doubt :p ehehehe my little family meheheheheheheh my motivation tto keep going everyday mwa.. I just wanna say na i will always be proud of you bebe wheter its a big win or a small win , and ill never ako mag sasawang supportahan ka yun lang mwa nakalimutan ko na pano mag add ng background so un muna gagawin ko ngayon AHAHAH mwa love u always!....	</p>
+    </div>
+</div>
+
+<div class="feedback-box">
+    <p style="color: #721c24;">Ang ganda mo lagi!</p>
+    <button onclick="showPopup('yes')">Yes</button>
+    <button onclick="showPopup('no')">No</button>
+</div>
+
+<div class="popup" id="popupYes" style="color: #721c24;">
+    <h2>Hays, buti alam mo!</h2>
+    <button onclick="hidePopup()">Close</button>
+</div>
+
+<div class="popup" id="popupNo" style="color: #721c24;">
+    <h2>Luh, sino may sabing no, di naten bati?</h2>
+    <button onclick="hidePopup()">Close</button>
+</div>
+
+<div class="overlay" onclick="hidePopup()"></div>
+
+<script>
+    function showPopup(response) {
+        if (response === 'no') {
+            document.getElementById('popupNo').style.display = 'block';
+            document.querySelector('.overlay').style.display = 'block';
+        } else if (response === 'yes') {
+            document.getElementById('popupYes').style.display = 'block';
+            document.querySelector('.overlay').style.display = 'block';
+        }
+    }
+
+    function hidePopup() {
+        document.querySelectorAll('.popup').forEach(function(el) {
+            el.style.display = 'none';
+        });
+        document.querySelector('.overlay').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
